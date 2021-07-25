@@ -23,11 +23,11 @@ const loginValidation = (data) => {
 const carValidation = (data) => {
   const schema = Joi.object({
     carname: Joi.string().min(0).max(50).required(),
-    description: Joi.string().max(50),
-    price: Joi.number().required(),
-    lowestPrice: Joi.number().required(),
-    year: Joi.number().required(),
-    mileage: Joi.number().required(),
+    description: Joi.string().allow(null, ""),
+    price: Joi.number().min(10).required(),
+    lowestPrice: Joi.number().min(5).required(),
+    year: Joi.string().required(),
+    mileage: Joi.number().min(1).required(),
   });
   return schema.validate(data);
 };

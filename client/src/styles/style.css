@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+table.tb {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+table.tb td.opt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-left: hidden;
+}
+
+div.form {
+  min-height: 75%;
+  padding-top: 3rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+div.tot {
+  min-height: 75%;
+  width: 100%;
+  padding: 1.2rem 1.3rem;
+}
+
+div.body {
+  min-height: 60%;
+  padding-top: 3rem;
+}
+
+div.body .home {
+  /* Since positioning the image, we need to help out the caption */
+  /* Declare heights because of positioning of img element */
+  /* MARKETING CONTENT
+      -------------------------------------------------- */
+  /* Center align the text within the three columns below the carousel */
+  /* rtl:begin:ignore */
+  /* rtl:end:ignore */
+  /* Featurettes
+      ------------------------- */
+  /* Thin out the marketing headings */
+  /* RESPONSIVE CSS
+      -------------------------------------------------- */
+}
+
+div.body .home .img2 {
+  height: 500px;
+  width: 500px;
+}
+
+div.body .home .img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right top;
+     object-position: right top;
+}
+
+div.body .home .hmg {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right bottom;
+     object-position: right bottom;
+}
+
+div.body .home .carousel {
+  margin-bottom: 4rem;
+}
+
+div.body .home .carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+div.body .home .fix {
+  bottom: 18rem;
+  color: black;
+}
+
+div.body .home .carousel-item {
+  height: 32rem;
+}
+
+div.body .home .carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+div.body .home .marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+div.body .home .marketing h2 {
+  font-weight: 400;
+}
+
+div.body .home .marketing .col-lg-4 p {
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+}
+
+div.body .home .featurette-divider {
+  margin: 5rem 0;
+  /* Space out the Bootstrap <hr> more */
+}
+
+div.body .home .featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  /* rtl:remove */
+  letter-spacing: -0.05rem;
+}
+
+@media screen and (max-width: 600px) {
+  div.body .home div.bd {
+    border: none;
+  }
+}
+
+@media (min-width: 40em) {
+  div.body .home {
+    /* Bump up size of carousel content */
+  }
+  div.body .home .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+  div.body .home .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  div.body .home .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

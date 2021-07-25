@@ -19,6 +19,19 @@ router.get("/", (req, res) => {
     });
 });
 
+//getByID
+router.get("/:_id", (req, res) => {
+  let { _id } = req.params;
+  Car.findOne({ _id })
+    .then((d) => {
+      res.send(d);
+    })
+    .catch((e) => {
+      console.log(e);
+      res.send(e);
+    });
+});
+
 //post new car
 router.post("/", async (req, res) => {
   //validate the input before making a new course
@@ -46,10 +59,6 @@ router.post("/", async (req, res) => {
 
 //patch
 router.patch("/:_id", async (req, res) => {
-  //validate the input before making a new course
-  const { error } = carValidation(req.body);
-  if (error) return res.status(400).send(error.details[0].message);
-
   let { _id } = req.params;
   let car = await Car.findOne({ _id });
 
