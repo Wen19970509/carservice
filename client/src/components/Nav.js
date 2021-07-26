@@ -35,20 +35,6 @@ const NavComponent = (props) => {
                 首頁
               </Link>
             </li>
-            {!currentUser && (
-              <li className="nav-item">
-                <Link className="nav-link" to="/login">
-                  登入
-                </Link>
-              </li>
-            )}
-            {!currentUser && (
-              <li className="nav-item">
-                <Link className="nav-link" to="/register">
-                  註冊帳號
-                </Link>
-              </li>
-            )}
 
             {currentUser && (
               <li className="nav-item">
@@ -71,14 +57,32 @@ const NavComponent = (props) => {
                 </Link>
               </li>
             )}
-            {currentUser && (
-              <li className="nav-item">
-                <Link onClick={handleLogout} className="nav-link" to="#">
-                  登出
-                </Link>
-              </li>
-            )}
           </ul>
+          <div className="d-flex">
+            <ul className="navbar-nav me-auto mb-2 mb-md-0 ">
+              {!currentUser && (
+                <li className="nav-item">
+                  <Link className="nav-link" to="/login">
+                    登入
+                  </Link>
+                </li>
+              )}
+              {!currentUser && (
+                <li className="nav-item">
+                  <Link className="nav-link" to="/register">
+                    註冊帳號
+                  </Link>
+                </li>
+              )}
+              {currentUser && (
+                <li className="nav-item">
+                  <Link onClick={handleLogout} className="nav-link" to="#">
+                    登出
+                  </Link>
+                </li>
+              )}
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
