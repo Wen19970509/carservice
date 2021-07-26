@@ -56,6 +56,7 @@ const App = () => {
               <Search
                 currentUser={currentUser}
                 setCurrentUser={setCurrentUser}
+                setOldData={setOldData}
               />
             </div>
           </Route>

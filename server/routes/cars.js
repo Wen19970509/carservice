@@ -30,7 +30,18 @@ router.get("/:_id", (req, res) => {
       res.send(e);
     });
 });
-
+//search
+router.get("/search/:name", (req, res) => {
+  let { name } = req.params;
+  let newName = new RegExp(name);
+  Car.find({ carname: { $regex: newName, $options: "i" } })
+    .then((d) => {
+      res.status(200).send(d);
+    })
+    .catch((e) => {
+      res.status(500).send(e);
+    });
+});
 //post new car
 router.post("/", async (req, res) => {
   //validate the input before making a new course

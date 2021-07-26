@@ -78,9 +78,6 @@ const Cars = (props) => {
     setOldData(data);
     history.push("/edit");
   };
-  useEffect((d) => {
-    setOldData({});
-  }, []);
   return (
     <div className="row justify-content-center text-center">
       {!currentUser && (

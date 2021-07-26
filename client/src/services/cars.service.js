@@ -105,6 +105,22 @@ class CarService {
       },
     });
   }
+
+  //search
+  getCarsByName(name) {
+    let token;
+    if (localStorage.getItem("user")) {
+      token = JSON.parse(localStorage.getItem("user")).token;
+    } else {
+      token = "";
+    }
+
+    return axios.get(API_URL + "/search/" + name, {
+      headers: {
+        Authorization: token,
+      },
+    });
+  }
   post(carname, mileage, price, lowestPrice, description, year) {
     let token;
     if (localStorage.getItem("user")) {
