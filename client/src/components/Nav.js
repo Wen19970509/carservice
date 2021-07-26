@@ -15,7 +15,7 @@ const NavComponent = (props) => {
     <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark ">
       <div className="container-fluid  ">
         <Link className="navbar-brand" to="/">
-          好事多車管家
+          CarsGO | 好事多車管家
         </Link>
         <button
           className="navbar-toggler"
