@@ -4,12 +4,12 @@ import CarsService from "../services/cars.service";
 const Edit = (props) => {
   let { currentUser, setCurrentUser, editID, setEditID, oldData, setOldData } =
     props;
-  let [carname, setCarname] = useState("");
-  let [mileage, setMileage] = useState(0);
-  let [price, setPrice] = useState(0);
-  let [lowestPrice, setLowestPrice] = useState(0);
-  let [description, setDescription] = useState("");
-  let [year, setYear] = useState(0);
+  let [carname, setCarname] = useState(oldData.carname);
+  let [mileage, setMileage] = useState(oldData.mileage);
+  let [price, setPrice] = useState(oldData.price);
+  let [lowestPrice, setLowestPrice] = useState(oldData.lowestPrice);
+  let [description, setDescription] = useState(oldData.description);
+  let [year, setYear] = useState(oldData.year);
   let [message, setMessage] = useState("");
   const history = useHistory();
   const handleTakeToLogin = () => {
@@ -35,7 +35,7 @@ const Edit = (props) => {
   };
   const editCar = () => {
     CarsService.edit(
-      editID,
+      oldData._id,
       carname,
       mileage,
       price,
@@ -77,7 +77,7 @@ const Edit = (props) => {
 
             <label for="exampleforTitle">車款</label>
             <input
-              placeholder={oldData.carname}
+              value={carname}
               name="carname"
               type="text"
               className="form-control"
@@ -87,7 +87,7 @@ const Edit = (props) => {
             <br />
             <label for="exampleforPrice">年份 </label>
             <input
-              placeholder={oldData.year}
+              value={year}
               name="year"
               type="text"
               className="form-control"
@@ -97,7 +97,7 @@ const Edit = (props) => {
             <br />
             <label for="exampleforTitle">里程(km)</label>
             <input
-              placeholder={oldData.mileage}
+              value={mileage}
               name="mileage"
               type="number"
               className="form-control"
@@ -107,7 +107,7 @@ const Edit = (props) => {
             <br />
             <label for="exampleforPrice">售價 (萬)</label>
             <input
-              placeholder={oldData.price}
+              value={price}
               name="price"
               type="number"
               className="form-control"
@@ -117,7 +117,7 @@ const Edit = (props) => {
             <br />
             <label for="exampleforPrice">底價 (萬)</label>
             <input
-              placeholder={oldData.lowestPrice}
+              value={lowestPrice}
               name="lowestPrice"
               type="number"
               className="form-control"
@@ -127,7 +127,7 @@ const Edit = (props) => {
             <br />
             <label for="exampleforContent">備註</label>
             <textarea
-              placeholder={oldData.description}
+              value={description}
               className="form-control"
               id="exampleforContent"
               aria-describedby="emailHelp"

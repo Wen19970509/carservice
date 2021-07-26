@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const Car = require("../models").carModel;
 const carValidation = require("../validation").carValidation;
-
 //middleWare
 router.use((req, res, next) => {
   console.log("A request is coming in to carRoute");

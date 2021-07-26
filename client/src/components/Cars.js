@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import CarsService from "../services/cars.service";
 
 const Cars = (props) => {
-  let { currentUser, setEditID, setOldData } = props;
+  let { currentUser, setOldData, oldData } = props;
   const history = useHistory();
   const handleTakeToLogin = () => {
     history.push("/login");
@@ -64,14 +64,23 @@ const Cars = (props) => {
   const handlID = (e) => {
     setDeleteID(e.target.id);
   };
-  const handleEdit = (e) => {
-    CarsService.getByID(e.target.id).then((d) => {
-      setOldData(d.data);
-    });
-    setEditID(e.target.id);
-
+  const handleEdit = async (e) => {
+    const data = await CarsService.getByID(e.target.id)
+      .then((d) => {
+        return d.data;
+        // setOldData(d.data);
+        // console.log(oldData);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+    console.log(data);
+    setOldData(data);
     history.push("/edit");
   };
+  useEffect((d) => {
+    setOldData({});
+  }, []);
   return (
     <div className="row justify-content-center text-center">
       {!currentUser && (

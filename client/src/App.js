@@ -12,7 +12,6 @@ import Search from "./components/Search";
 import AuthService from "./services/auth.service";
 const App = () => {
   let [currentUser, setCurrentUser] = useState(AuthService.getCurrentUser);
-  let [editID, setEditID] = useState("");
   let [oldData, setOldData] = useState({});
   return (
     <div>
@@ -46,9 +45,8 @@ const App = () => {
               <Cars
                 currentUser={currentUser}
                 setCurrentUser={setCurrentUser}
-                setEditID={setEditID}
-                editID={editID}
                 setOldData={setOldData}
+                oldData={oldData}
               />
             </div>
           </Route>
@@ -67,8 +65,6 @@ const App = () => {
               <Edit
                 currentUser={currentUser}
                 setCurrentUser={setCurrentUser}
-                editID={editID}
-                setEditID={setEditID}
                 oldData={oldData}
                 setOldData={setOldData}
               />

@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+mongoose.set("useFindAndModify", false);
 
 const carSchema = new mongoose.Schema({
   id: {
