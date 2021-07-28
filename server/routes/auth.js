@@ -42,6 +42,18 @@ router.post("/register", async (req, res) => {
   }
 });
 
+//get user
+router.get("/:_id", (req, res) => {
+  let { _id } = req.params;
+  User.findOne({ _id })
+    .then((d) => {
+      res.send(d);
+    })
+    .catch((e) => {
+      console.log(e);
+      res.send(e);
+    });
+});
 //login
 router.post("/login", (req, res) => {
   //check validation

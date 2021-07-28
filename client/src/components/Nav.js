@@ -30,12 +30,6 @@ const NavComponent = (props) => {
         </button>
         <div className="collapse navbar-collapse" id="navbarCollapse">
           <ul className="navbar-nav me-auto mb-2 mb-md-0 ">
-            <li className="nav-item">
-              <Link className="nav-link  active" aria-current="page" to="/">
-                首頁
-              </Link>
-            </li>
-
             {currentUser && (
               <li className="nav-item">
                 <Link className="nav-link" to="/cars">
@@ -71,6 +65,13 @@ const NavComponent = (props) => {
                 <li className="nav-item">
                   <Link className="nav-link" to="/register">
                     註冊帳號
+                  </Link>
+                </li>
+              )}
+              {currentUser && (
+                <li className="nav-item">
+                  <Link className="nav-link" to="/profile">
+                    會員中心
                   </Link>
                 </li>
               )}

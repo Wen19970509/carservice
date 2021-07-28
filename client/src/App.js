@@ -9,6 +9,7 @@ import Cars from "./components/Cars";
 import PostCar from "./components/PostCar";
 import Edit from "./components/Edit";
 import Search from "./components/Search";
+import Profile from "./components/Profile";
 import AuthService from "./services/auth.service";
 const App = () => {
   let [currentUser, setCurrentUser] = useState(AuthService.getCurrentUser);
@@ -47,6 +48,14 @@ const App = () => {
                 setCurrentUser={setCurrentUser}
                 setOldData={setOldData}
                 oldData={oldData}
+              />
+            </div>
+          </Route>
+          <Route path="/profile" exact>
+            <div className="tot">
+              <Profile
+                currentUser={currentUser}
+                setCurrentUser={setCurrentUser}
               />
             </div>
           </Route>
