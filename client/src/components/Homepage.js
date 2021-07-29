@@ -36,14 +36,14 @@ const Homecomponent = (props) => {
                 </p>
                 {!currentUser && (
                   <p>
-                    <Link className="btn btn-lg btn-primary" href="/register">
+                    <Link className="btn btn-lg btn-primary" to="/register">
                       馬上註冊使用
                     </Link>
                   </p>
                 )}
                 {currentUser && (
                   <p>
-                    <Link className="btn btn-lg btn-primary" href="/postCar">
+                    <Link className="btn btn-lg btn-primary" to="/postCar">
                       登錄車輛
                     </Link>
                   </p>
