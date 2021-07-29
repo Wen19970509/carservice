@@ -57,6 +57,7 @@ div.body .home {
 div.body .home .img2 {
   height: 500px;
   width: 500px;
+  max-width: 100%;
 }
 
 div.body .home .img {
