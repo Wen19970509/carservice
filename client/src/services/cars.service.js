@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_URL = "http://localhost:8080/api/cars";
+const API_URL = "https://carscocarservice.herokuapp.com/api/cars";
 
 class CarService {
   delete(_id) {
