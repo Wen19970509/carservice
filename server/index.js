@@ -33,7 +33,7 @@ app.use(
   carRoute
 );
 app.get("/", (req, res) => {
-  res.send("Hello world");
+  res.send("CarService API");
 });
 //server side 不能使用port 3000 因為React 本身是運行在port 3000上
 const port = process.env.PORT || 8080;
