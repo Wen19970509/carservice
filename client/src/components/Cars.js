@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import CarsService from "../services/cars.service";
 
 const Cars = (props) => {
   let { currentUser, setOldData, oldData } = props;
   const history = useHistory();
+  const location = useLocation();
   const handleTakeToLogin = () => {
     history.push("/login");
   };
@@ -35,7 +36,7 @@ const Cars = (props) => {
     CarsService.sell(e.target.id)
       .then((d) => {
         console.log(d);
-        history.go(0);
+        window.location.reload();
       })
       .catch((e) => {
         console.log(e);
@@ -45,7 +46,7 @@ const Cars = (props) => {
     CarsService.onSell(e.target.id)
       .then((d) => {
         console.log(d);
-        history.go(0);
+        window.location.reload();
       })
       .catch((e) => {
         console.log(e);
@@ -55,7 +56,7 @@ const Cars = (props) => {
     CarsService.delete(e.target.id)
       .then((d) => {
         console.log(d);
-        history.go(0);
+        window.location.reload();
       })
       .catch((e) => {
         console.log(e);
