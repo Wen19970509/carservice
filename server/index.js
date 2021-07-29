@@ -32,7 +32,12 @@ app.use(
   passport.authenticate("jwt", { session: false }),
   carRoute
 );
+app.get("/", (req, res) => {
+  res.send("Hello world");
+});
 //server side 不能使用port 3000 因為React 本身是運行在port 3000上
-app.listen(8080, () => {
-  console.log("Server running on port 8080");
+const port = process.env.PORT || 8080;
+
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
