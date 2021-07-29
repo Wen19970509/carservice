@@ -43,7 +43,7 @@ const LoginComponent = (props) => {
           )}
           <h1 className="text-center">會員登入</h1>
           <p class="fs-6 text-end">
-            還沒有帳號了嗎? <Link to="/register">點此註冊 </Link>
+            還沒有帳號嗎? <Link to="/register">點此註冊 </Link>
           </p>
           <div className="form-group">
             <label htmlFor="username">Email</label>

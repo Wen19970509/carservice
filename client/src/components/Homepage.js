@@ -2,6 +2,7 @@ import React from "react";
 import car1 from "../img/1.jpg";
 import car2 from "../img/2.jpg";
 import car3 from "../img/4.jpg";
+import { Link } from "react-router-dom";
 const Homecomponent = (props) => {
   let { currentUser, setCurrentUser } = props;
   return (
@@ -35,16 +36,16 @@ const Homecomponent = (props) => {
                 </p>
                 {!currentUser && (
                   <p>
-                    <a className="btn btn-lg btn-primary" href="/register">
+                    <Link className="btn btn-lg btn-primary" href="/register">
                       馬上註冊使用
-                    </a>
+                    </Link>
                   </p>
                 )}
                 {currentUser && (
                   <p>
-                    <a className="btn btn-lg btn-primary" href="/postCar">
-                      登陸車輛
-                    </a>
+                    <Link className="btn btn-lg btn-primary" href="/postCar">
+                      登錄車輛
+                    </Link>
                   </p>
                 )}
               </div>
