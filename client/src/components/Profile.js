@@ -29,12 +29,6 @@ const Profile = (props) => {
             </h3>
           </header>
           <p>
-            <strong>Token:{currentUser.token}</strong>
-          </p>
-          <p>
-            <strong>ID:{currentUser.user._id}</strong>
-          </p>
-          <p>
             <strong>Email:{currentUser.user.email}</strong>
           </p>
         </div>
