@@ -41,7 +41,12 @@ const RegisterComponent = () => {
             <p class="fs-6 text-end">
               有帳號了嗎? <Link to="/login">點此登入 </Link>
             </p>
-            <label className="fs-5" htmlFor="username">
+            <p>
+              測試帳號請使用: <br />
+              testguest@gmail.com <br />
+              11111111{" "}
+            </p>
+            {/* <label className="fs-5" htmlFor="username">
               用戶名稱
             </label>
             <input
@@ -82,7 +87,7 @@ const RegisterComponent = () => {
               className="btn btn-primary btn-lg "
             >
               <span>註冊</span>
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
