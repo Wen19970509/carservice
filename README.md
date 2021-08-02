@@ -1,6 +1,5 @@
 # carservice
-
-MERN 全棧實作練習。
+MERN 全棧實作。
 
 使用技術與工具
 
