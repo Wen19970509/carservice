@@ -15,5 +15,4 @@ ReactJS | Sass | Bootstrap | axios |
 個人技術筆記:
 https://orange-trail-77c.notion.site/Project-Client-part-17796b849f334a919b4e9d53ba9c36c3
 
-Deploy 流程參考:
-https://orange-trail-77c.notion.site/MERN-deploy-e32613dccd6f4e4db16ab1a2742a5a00
+
