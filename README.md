@@ -1,17 +1,20 @@
 # carservice
 
-MERN 全棧實作。
+MERN 全棧實作練習。
 
 使用技術與工具
 
 Server:
 Express | MongoDB Atlas | NodeJS | Mongoose | Joi | JWT | Passport | Cors | Bcrypt 
 
-技術筆記參考:
+個人技術筆記:
 https://orange-trail-77c.notion.site/Project-Backend-Part-64284bb05ade44969157ff8925bb24ba
 
 Client :
 ReactJS | Sass | Bootstrap | axios |
 
-技術筆記:
+個人技術筆記:
 https://orange-trail-77c.notion.site/Project-Client-part-17796b849f334a919b4e9d53ba9c36c3
+
+Deploy 流程參考:
+https://orange-trail-77c.notion.site/MERN-deploy-e32613dccd6f4e4db16ab1a2742a5a00
